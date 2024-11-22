@@ -10,20 +10,20 @@
 
 <body>
 
-    <!-- Encabezado con menú de navegación alineado a la derecha -->
+
     <header>
         <h1>Proyecto Mascotas</h1>
         <nav>
             <ul>
-                <li><a href="#home">Conocenos</a></li>
-                <li><a href="#about">Paquetes y Servicios</a></li>
-                <li><a href="#services">Reportar perro/gato</a></li>
+                <li><a href="conocenos.html">Conocenos</a></li>
+                <li><a href="dibujar.html">Dibujar</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="login.html">Inicio de sesión</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Contenedor central con texto e imagen -->
+
     <main>
         <div class="content">
             <div class="text">
@@ -33,39 +33,51 @@
                 </h2>
             </div>
             <div class="main-image">
-                <!-- Imagen de ejemplo -->
+
                 <img src="images/Perro1.jpg" alt="Imagen de un perro">
             </div>
         </div>
 
-        <!-- Sección de búsqueda avanzada -->
+
         <div class="advanced-search">
-            <input type="text" placeholder="Buscar...">
-            <img src="images/Perro-Icono.jpg" alt="Perro-Icono">
-            <img src="images/Gato-Icono.jpg" alt="Gato-Icono">
+            <h1>Busqueda avanzada</h1>
+            <button class="icon-button" onclick="location.href='conocenos.html'">
+                <img src="images/Perro-Icono.png" alt="Perro-Icono">
+            </button>
+            <button class="icon-button" onclick="location.href='conocenos.html'">
+                <img src="images/Gato-Icono.png" alt="Gato-Icono">
+            </button>
             <select>
                 <option value="">Selecciona una raza</option>
-                <option value="option1">Raza 1</option>
-                <option value="option2">Raza 2</option>
-                <option value="option3">Raza 3</option>
+                <option value="option1">Pastor Alemán</option>
+                <option value="option2">Bulldog Francés</option>
+                <option value="option3">Chihuahua</option>
+                <option value="option4">Pug</option>
+                <option value="option5">Rottweiler</option>
             </select>
         </div>
     </main>
 
-    <!-- Pie de página con enlaces a redes sociales y otros enlaces -->
+    
     <footer>
         <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/Facebook-Icono.png" alt="Facebook"> Facebook
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/Instagram-Icono.png" alt="Instagram"> Instagram
+            </a>
+            <a href="https://youtube.com" target="_blank">
+                <img src="images/YouTube-Icono.png" alt="YouTube"> YouTube
+            </a>
         </div>
         <div class="other-links">
-            <a href="#">Enlace 1</a>
-            <a href="#">Enlace 2</a>
-            <a href="#">Enlace 3</a>
+            <a href="conocenos.html">Conócenos</a>
+            <a href="dibujar.html">Dibujar</a>
+            <a href="contacto.html">Contacto</a>
         </div>
     </footer>
-    
+
 
 </body>
 

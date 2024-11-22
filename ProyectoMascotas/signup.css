@@ -10,7 +10,7 @@ body
 {
     background: white;
     background-image: url(images/Perro3.jpg);
-    background-position: right;
+    background-position: left;
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -67,7 +67,7 @@ button
 
 button:hover
 {
-    background: rgba(17, 107, 143, 0.877);
+    background: #009c8c;
 }
 
 input:focus
