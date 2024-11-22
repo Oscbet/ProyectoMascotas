@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dibujar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dibujar.css">
+    <script src="dibujar.js" defer></script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <section class="barra-herramientas">
+            <div class="fila">
+                <label class="titulo">Figuras</label>
+                <ul class="opciones">
+                    <li class="opcion">
+                        <img src="images/rectangle.svg">
+                        <span>Rectángulo</span>
+                    </li>
+                    <li class="opcion">
+                        <img src="images/circle.svg">
+                        <span>Círculo</span>
+                    </li>
+                    <li class="opcion">
+                        <img src="images/triangle.svg">
+                        <span>Triángulo</span>
+                    </li>
+                    <li class="opcion">
+                        <input type="checkbox" class="rellenar-color">
+                        <label for="rellenar-color">Rellenar color</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="fila">
+                <label class="titulo">Opciones</label>
+                <ul class="opciones">
+                    <li class="opcion active" id="pincel">
+                        <img src="images/brush.svg">
+                        <span>Pincel</span>
+                    </li>
+                    <li class="opcion" id="borrador">
+                        <img src="images/eraser.svg">
+                        <span>Borrador</span>
+                    </li>
+                    <li class="opcion">
+                        <input type="range" class="slider-tamano">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="fila colores">
+                <label class="titulo">Color</label>
+                <ul class="opciones">
+                    <li class="opcion">
+                        <input type="color" class="color-picker" value="black">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="fila botones">
+                <button class="limpiar-canvas">Limpiar Canvas</button>
+                <button class="guardar-imagen">Guardar Imagen</button>
+                <button class="inicio">Inicio</button>
+            </div>
+        </section>
+
+        <section class="canvas-drawing">
+            <canvas></canvas>
+        </section>
+        <section class="galeria">
+            <h2>Galería</h2>
+            <div class="imagenes-guardadas"></div>
+        </section>
+        <div class="modal-imagen">
+            <span class="cerrar-modal">&times;</span>
+            <img class="imagen-ampliada" src="" alt="Imagen ampliada">
+        </div>
+    </div>
+</body>
+
+</html>

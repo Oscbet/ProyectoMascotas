@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(images/Fondo\ perritos.jpg);
+}
+
+.contenedor {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    max-width: 1050px;
+}
+
+section {
+    background: #fff;
+    border-radius: 7px;
+}
+
+.barra-herramientas {
+    width: 210px;
+    padding: 15px 22px 0;
+}
+
+.barra-herramientas .fila {
+    margin-bottom: 20px;
+}
+
+.fila .opciones {
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.fila .opciones .opcion {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.opcion:is(:hover, .active) img {
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.opcion :where(span, label) {
+    color: #5A6168;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.opcion:is(:hover, .active) :where(span, label) {
+    color: #4A98F7;
+}
+
+.opcion .rellenar-color {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+}
+
+.rellenar-color:checked~label {
+    color: #4A98F7;
+}
+
+.opcion .slider-tamano {
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.color-picker {
+    border: none;
+    border-radius: 20%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.color-picker::-webkit-color-swatch {
+    border: none;
+}
+
+.color-picker::-moz-color-swatch {
+    border: none;
+}
+
+.botones button {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    font-size: 0.9rem;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botones .limpiar-canvas {
+    color: black;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+.limpiar-canvas:hover {
+    color: #fff;
+    background: black;
+}
+
+.botones .guardar-imagen {
+    background: #4A98F7;
+    border: 1px solid #4A98F7;
+}
+
+.guardar-imagen:hover {
+    background: black;
+    border: 1px solid black;
+}
+
+.canvas-drawing {
+    flex: 1;
+}
+
+.canvas-drawing canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.botones .inicio {
+    background: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.inicio:hover {
+    background: black;
+    border: 1px solid black;
+}
+
+.galeria {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.galeria h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #4A98F7;
+}
+
+.imagenes-guardadas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.imagenes-guardadas img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.imagenes-guardadas img:hover {
+    transform: scale(1.1);
+}
+
+.modal-imagen {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-imagen img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cerrar-modal:hover {
+    color: #4A98F7;
+}
